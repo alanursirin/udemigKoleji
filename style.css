@@ -1,0 +1,361 @@
+/* all */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/bg.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+}
+
+.nav-links{
+   flex: 1;
+   text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 1s;
+
+}
+
+.nav-links ul li a:hover::after{
+    width: 90%;
+}
+
+/* Launch Box */
+.launch-box{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.launch-box p{
+    margin: 10px 0;
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+}
+
+.launch-box h1{
+    font-size: 50px;
+}
+
+.hero-btn{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.hero-btn:hover{
+    border: 1px solid red;
+    background-color: red;
+    transition: 1s;
+}
+
+nav .bi{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .launch-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        background-color: red;
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .bi{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+/* Courses */
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 35px;
+}
+
+p{
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 30%;
+    background-color: rgb(230, 230, 220);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+h3{
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) { 
+    .row{
+        display: block;
+    }
+}
+
+/* Campus */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    border-radius: 10px;
+    margin-bottom: 30px;
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.layer:hover{
+    background-color: rgba(152, 72, 72, 0.5);
+}
+
+.layer h3{
+    opacity: 0;
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    transition: 1s;
+}
+
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* Facilities */
+.facilities{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    margin: 16px 0;
+}
+
+/* Testemonials */
+.testemonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testemonials-col{
+    flex-basis: 30%;
+    background-color: rgba(243, 238, 231, 0.7);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px;
+}
+
+.testemonials-col:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+
+.testemonials-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testemonials-col p{
+    padding: 0;
+}
+
+.testemonials-col h2{
+    margin-top: 20px;
+}
+
+.testemonials-col .bi{
+    color: red;
+}
+
+/*Urgent Action */
+.ua{
+    background-color: yellowgreen;
+    width: 80%;
+    margin: 100px auto;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/london.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.ua h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .ua h1{
+        font-size: 25px;
+    }
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h1{
+    margin: 25px 0;
+}
+
+.icons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icons .bi{
+    font-size: 30px;
+    opacity: 0.7;
+    color: red;
+    margin: 10px 10px;
+    cursor: pointer;
+    padding: 20px 10px;
+}
+.icons .bi:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+footer .bi-heart-fill{
+    color: pink;
+}
